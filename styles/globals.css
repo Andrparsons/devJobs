@@ -1,5 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
+:root {
+  /* colours */
+  --violet: #5964e0;
+  --lightViolet: #939bf4;
+  --veryDarkBlue: #19292d;
+  --midnight: #121721;
+  --white: #ffffff;
+  --lightGrey: #f4f6f8;
+  --grey: #9daec2;
+  --darkGrey: #638098;
+
+  /* colour intentions */
+  --appBg: var(--lightGrey);
+  --compBg: var(--white);
+  --headingColour: var(--veryDarkBlue);
+  --textColour: var(--darkGrey);
+}
+
 html,
 body {
   padding: 0;
@@ -20,26 +38,26 @@ a {
 
 /* typography */
 
-h1 {
-  font-size: 1.75rem;
+h1,
+h2,
+h3,
+h4 {
   font-weight: 700;
   line-height: 1.2;
+}
+
+h1 {
+  font-size: 1.75rem;
 }
 
 h2 {
   font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.2;
 }
 
 h3 {
   font-size: 1.25rem;
-  font-weight: 700;
-  line-height: 1.2;
 }
 
 h4 {
   font-size: 0.875rem;
-  font-weight: 700;
-  line-height: 1.2;
 }

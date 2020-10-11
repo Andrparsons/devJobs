@@ -16,6 +16,9 @@
   --compBg: var(--white);
   --headingColour: var(--veryDarkBlue);
   --textColour: var(--darkGrey);
+  --toggleBg: var(--white);
+  --toggleColour: var(--violet);
+  --toggleHover: var(--lightViolet);
 }
 
 html,

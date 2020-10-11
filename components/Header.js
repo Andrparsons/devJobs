@@ -5,7 +5,7 @@ import Container from "../components/Container";
 import Toggle from "../components/Toggle";
 
 export default function Header() {
-  let [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
   const onChangeMode = (checked) => {
     setDarkMode(checked);
   };

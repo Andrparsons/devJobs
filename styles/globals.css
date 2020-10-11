@@ -21,6 +21,15 @@
   --toggleHover: var(--lightViolet);
 }
 
+/* dark theme colours */
+
+.dark {
+  --appBg: var(--midnight);
+  --compBg: var(--white);
+  --headingColour: var(--veryDarkBlue);
+  --textColour: var(--darkGrey);
+}
+
 html,
 body {
   padding: 0;
@@ -28,6 +37,7 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   font-weight: 400;
   line-height: 1.62;
+  background-color: var(--appBg);
 }
 
 a {

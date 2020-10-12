@@ -11,14 +11,29 @@
   --grey: #9daec2;
   --darkGrey: #638098;
 
+  --violetShade1: #eeeffc;
+  --violetShade2: #c5c9f4;
+  --darkShade1: #303642;
+  --darkshade2: #696e76;
+
   /* colour intentions */
   --appBg: var(--lightGrey);
   --compBg: var(--white);
   --headingColour: var(--veryDarkBlue);
   --textColour: var(--darkGrey);
+
+  /* toggle colours */
   --toggleBg: var(--white);
   --toggleColour: var(--violet);
   --toggleHover: var(--lightViolet);
+
+  /* button colours */
+  --btnPrimaryBg: var(--violet);
+  --btnPrimaryColour: var(--white);
+  --btnPrimaryHover: var(--lightViolet);
+  --btnSecondaryBg: var(--violetShade1);
+  --btnSecondaryColour: var(--violet);
+  --brnSecondaryHover: var(--violetShade2);
 }
 
 /* dark theme colours */
@@ -28,6 +43,10 @@
   --compBg: var(--white);
   --headingColour: var(--veryDarkBlue);
   --textColour: var(--darkGrey);
+
+  --btnSecondaryBg: var(--darkShade1);
+  --btnSecondaryColour: var(--white);
+  --brnSecondaryHover: var(--darkshade2);
 }
 
 html,
@@ -47,6 +66,17 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+button {
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 1em 2.4375em;
+  line-height: 1.2;
+  border-radius: 0.3125rem;
+  border: none;
 }
 
 /* typography */

@@ -1,0 +1,17 @@
+.primary {
+  background-color: var(--btnPrimaryBg);
+  color: var(--btnPrimaryColour);
+}
+
+.primary:hover {
+  background-color: var(--btnPrimaryHover);
+}
+
+.secondary {
+  background-color: var(--btnSecondaryBg);
+  color: var(--btnSecondaryColour);
+}
+
+.secondary:hover {
+  background-color: var(--brnSecondaryHover);
+}

@@ -40,7 +40,7 @@
 
 .dark {
   --appBg: var(--midnight);
-  --compBg: var(--white);
+  --compBg: var(--veryDarkBlue);
   --headingColour: var(--veryDarkBlue);
   --textColour: var(--darkGrey);
 

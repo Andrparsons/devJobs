@@ -1,2 +1,13 @@
 .search {
+  width: 100%;
+  min-width: 0;
+  background-color: transparent;
+  border: none;
+  color: var(--inputColour);
+  font-size: 1rem;
+}
+
+.search::placeholder {
+  color: var(--inputColour);
+  opacity: 0.5;
 }

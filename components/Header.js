@@ -5,6 +5,7 @@ import Container from "../components/Container";
 import Toggle from "../components/Toggle";
 import SearchInput from "../components/SearchInput";
 import Button from "../components/Button";
+import Icon from "../components/Icon";
 
 export default function Header() {
   const [search, setSearch] = useState("");
@@ -29,16 +30,29 @@ export default function Header() {
           </div>
         </div>
         <div className={styles.inputGroup}>
+          <Icon iconSvg={"./desktop/icon-search.svg"} />
           <SearchInput
             placeholder="Filter by Title"
             value={search}
             setValue={setSearch}
           />
+          <div className={styles.divider} />
+          <Icon iconSvg={"./desktop/icon-location.svg"} />
           <SearchInput
             placeholder="Filter by Place"
             value={place}
             setValue={setPlace}
           />
+          <div className={styles.divider} />
+
+          <label className={styles.checkLabel}>
+            <input
+              type="checkbox"
+              name="full-time"
+              className={styles.checkbox}
+            />
+            Full Time Only
+          </label>
           <Button btnStyle="primary">Search</Button>
         </div>
       </Container>

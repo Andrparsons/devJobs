@@ -38,6 +38,29 @@
   margin-top: 3.125rem;
 }
 
+.divider {
+  width: 1px;
+  margin: -1rem 1rem -1rem 0;
+  background-color: var(--inputColour);
+  flex-grow: 0;
+  flex-shrink: 0;
+  opacity: 0.2;
+}
+
+.checkLabel {
+  flex-grow: 0;
+  flex-shrink: 0;
+  align-self: center;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--headingColour);
+  margin-right: 1.625rem;
+}
+
+.checkbox {
+  margin-right: 1rem;
+}
+
 @media (min-width: 500px) {
   .header {
     background-image: url("/desktop/bg-pattern-header.svg");

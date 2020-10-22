@@ -4,7 +4,7 @@
   /* colours */
   --violet: #5964e0;
   --lightViolet: #939bf4;
-  --veryDarkBlue: #19292d;
+  --veryDarkBlue: #19202d;
   --midnight: #121721;
   --white: #ffffff;
   --lightGrey: #f4f6f8;
@@ -34,6 +34,10 @@
   --btnSecondaryBg: var(--violetShade1);
   --btnSecondaryColour: var(--violet);
   --brnSecondaryHover: var(--violetShade2);
+
+  /* input colours */
+  --inputColour: var(--veryDarkBlue);
+  --inputBorder: var(--darkGrey);
 }
 
 /* dark theme colours */
@@ -41,12 +45,15 @@
 .dark {
   --appBg: var(--midnight);
   --compBg: var(--veryDarkBlue);
-  --headingColour: var(--veryDarkBlue);
+  --headingColour: var(--white);
   --textColour: var(--darkGrey);
 
   --btnSecondaryBg: var(--darkShade1);
   --btnSecondaryColour: var(--white);
   --brnSecondaryHover: var(--darkshade2);
+
+  --inputColour: var(--white);
+  --inputBorder: var(--darkGrey);
 }
 
 html,
@@ -66,6 +73,11 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+img {
+  height: 100%;
+  max-width: 100%;
 }
 
 button {

@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 
 import styles from "./Header.module.css";
-import Container from "../components/Container";
-import Toggle from "../components/Toggle";
-import SearchInput from "../components/SearchInput";
-import Button from "../components/Button";
-import Icon from "../components/Icon";
+import Container from "../Container/Container";
+import Toggle from "../Toggle/Toggle";
+import SearchInput from "../SearchInput/SearchInput";
+import Button from "../Button/Button";
+import Icon from "../Icon/Icon";
 
 export default function Header() {
   const [search, setSearch] = useState("");

@@ -1,9 +1,24 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import useSWR from "swr";
+import Header from "../components/Header/Header";
 
-import Header from "../components/Header";
+const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Home() {
+  // const { data, error } = useSWR(
+  //   "https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json",
+  //   fetcher
+  // );
+
+  // if (error) {
+  //   console.error(error);
+  //   return "An error. Check console for details";
+  // }
+
+  // if (!data) return "Loading...";
+
+  // console.log(data);
   return (
     <div className={styles.container}>
       <Head>
@@ -11,7 +26,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header></Header>
+      <Header />
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>

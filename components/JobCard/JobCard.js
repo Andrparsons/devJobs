@@ -12,12 +12,13 @@ const JobCard = ({
       <div className={styles.cardContainer}>
         <img className={styles.companyLogo} src={company_logo} />
         <div className={styles.subtitle}>
-          <p>{dayjs(created_at).fromNow()}</p>
-          <p>{type}</p>
+          <p className={styles.cardText}>{dayjs(created_at).fromNow()}</p>
+          <div className={styles.textDivider}>&bull;</div>
+          <p className={styles.cardText}>{type}</p>
         </div>
-        <h3>{title}</h3>
-        <p>{company}</p>
-        <p>{location}</p>
+        <h3 className={styles.jobTitle}>{title}</h3>
+        <p className={styles.cardText}>{company}</p>
+        <h4 className={styles.location}>{location}</h4>
       </div>
     </div>
   );

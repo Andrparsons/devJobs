@@ -21,6 +21,7 @@
   --compBg: var(--white);
   --headingColour: var(--veryDarkBlue);
   --textColour: var(--darkGrey);
+  --locationColour: var(--violet);
 
   /* toggle colours */
   --toggleBg: var(--white);

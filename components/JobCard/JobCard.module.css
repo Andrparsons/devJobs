@@ -4,22 +4,58 @@
   max-width: 350px;
   margin-top: 3.125rem;
   flex: 1 1 350px;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 8px 10px 15px -10px rgba(0, 0, 0, 0.5);
+}
+
+.card:hover .jobTitle {
+  color: var(--textColour);
 }
 
 .cardContainer {
   position: relative;
-  margin: 3.125rem 0rem 2rem 2rem;
+  margin: 0 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .companyLogo {
-  width: 50px;
-  height: 50px;
+  width: 3.5rem;
+  height: 3.5rem;
+  top: 0;
+  left: 0;
   object-fit: contain;
   position: absolute;
-  top: -25px;
-  background-color: red;
+  background-color: var(--compBg);
+  margin-top: -1.5rem;
+  border-radius: 1rem;
+  border: 1px solid var(--appBg);
 }
 
 .subtitle {
   display: flex;
+  margin-top: 3rem;
+}
+
+.cardText {
+  color: var(--textColour);
+  margin: 0;
+}
+
+.textDivider {
+  align-self: center;
+  margin: 0 0.75rem;
+}
+
+.jobTitle {
+  margin: 0.75rem 0;
+}
+
+.location {
+  color: var(--locationColour);
 }

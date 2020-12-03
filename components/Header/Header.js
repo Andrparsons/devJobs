@@ -7,7 +7,7 @@ import SearchInput from "../SearchInput/SearchInput";
 import Button from "../Button/Button";
 import Icon from "../Icon/Icon";
 
-export default function Header() {
+export default function Header(props) {
   const [search, setSearch] = useState("");
   const [place, setPlace] = useState("");
   const [darkMode, setDarkMode] = useState(false);
@@ -17,6 +17,13 @@ export default function Header() {
   useEffect(() => {
     document.body.classList.toggle("dark", darkMode);
   }, [darkMode]);
+
+  function handleQuery() {
+    props.handleQuery({
+      search: search,
+      place: place,
+    });
+  }
 
   return (
     <header className={styles.header}>
@@ -53,7 +60,9 @@ export default function Header() {
             />
             Full Time Only
           </label>
-          <Button btnStyle="primary">Search</Button>
+          <Button btnStyle="primary" action={handleQuery}>
+            Search
+          </Button>
         </div>
       </Container>
     </header>

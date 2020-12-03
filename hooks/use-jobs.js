@@ -1,10 +1,13 @@
 import useSWR from "swr";
 
-const fetcher = (url) => fetch(url).then((res) => res.json());
-
-export default function useJobs() {
+export default function useJobs(query) {
   return useSWR(
-    "https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json",
-    fetcher
+    `https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=${query.search}&location=${query.place}`
+  );
+}
+
+export function pullJob(jobid) {
+  return useSWR(
+    `https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions/${jobid}.json`
   );
 }

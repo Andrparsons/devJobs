@@ -1,20 +1,12 @@
-import { useState, useEffect } from "react";
-
+import { useContext } from "react";
 import styles from "./Header.module.css";
 import Container from "../Container/Container";
 import Toggle from "../Toggle/Toggle";
-import HeaderInput from './HeaderInput'
 
-export default function Header() {
-  const [darkMode, setDarkMode] = useState(false);
+import { SearchContext } from "../../context/SearchContext";
 
-  const onChangeMode = (checked) => {
-    setDarkMode(checked);
-  };
-  useEffect(() => {
-    document.body.classList.toggle("dark", darkMode);
-  }, [darkMode]);
-
+export default function Header({ children }) {
+  const { darkMode, onChangeMode } = useContext(SearchContext);
 
   return (
     <header className={styles.header}>
@@ -27,7 +19,7 @@ export default function Header() {
             <img className={styles.moon} src="./desktop/icon-moon.svg" alt="" />
           </div>
         </div>
-        <HeaderInput />
+        {children}
       </Container>
     </header>
   );

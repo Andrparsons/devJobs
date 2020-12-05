@@ -6,6 +6,7 @@ import Header from "../components/Header/Header";
 import useJobs from "../hooks/use-jobs";
 import JobCard from "../components/JobCard/JobCard";
 import Container from "../components/Container/Container";
+import HeaderInput from "../components/Header/HeaderInput";
 
 import { SearchContext } from "../context/SearchContext";
 
@@ -20,7 +21,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
+      <Header>
+        <HeaderInput />
+      </Header>
       <main>
         <Container>
           <div className={styles.jobBoard}>

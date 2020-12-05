@@ -2,7 +2,7 @@ import useSWR from "swr";
 
 export default function useJobs(query) {
   return useSWR(
-    `https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=${query.search}&location=${query.place}`
+    `https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=${query.search}&location=${query.place}&full_time${query.fullTime}`
   );
 }
 

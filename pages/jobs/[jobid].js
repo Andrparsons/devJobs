@@ -12,9 +12,7 @@ export default function Home() {
   if (data) {
     cleanHtml = DOMPurify.sanitize(data.description);
   }
-
-  console.log(router.query.jobid);
-  console.log(data);
+  
   return (
     <div>
       <div dangerouslySetInnerHTML={{ __html: cleanHtml }} />;

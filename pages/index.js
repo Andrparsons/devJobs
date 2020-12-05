@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
@@ -7,13 +7,11 @@ import useJobs from "../hooks/use-jobs";
 import JobCard from "../components/JobCard/JobCard";
 import Container from "../components/Container/Container";
 
-export default function Home() {
-  const [query, setQuery] = useState({ search: "", place: "" });
-  const { data, error } = useJobs(query);
+import { SearchContext } from "../context/SearchContext";
 
-  function handleQuery(newValue) {
-    setQuery(newValue);
-  }
+export default function Home() {
+  const { query } = useContext(SearchContext);
+  const { data, error } = useJobs(query);
 
   return (
     <div className={styles.container}>
@@ -22,7 +20,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header query={query} handleQuery={handleQuery} />
+      <Header />
       <main>
         <Container>
           <div className={styles.jobBoard}>

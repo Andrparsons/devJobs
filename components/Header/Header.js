@@ -12,11 +12,11 @@ export default function Header({ children }) {
     <header className={styles.header}>
       <Container>
         <div className={styles.logoContainer}>
-          <img src="./desktop/logo.svg" alt="devjobs Logo" />
+          <img src="/desktop/logo.svg" alt="devjobs Logo" />
           <div className={styles.toggleContainer}>
-            <img className={styles.sun} src="./desktop/icon-sun.svg" alt="" />
+            <img className={styles.sun} src="/desktop/icon-sun.svg" alt="" />
             <Toggle checked={darkMode} setChecked={onChangeMode} />
-            <img className={styles.moon} src="./desktop/icon-moon.svg" alt="" />
+            <img className={styles.moon} src="/desktop/icon-moon.svg" alt="" />
           </div>
         </div>
         {children}

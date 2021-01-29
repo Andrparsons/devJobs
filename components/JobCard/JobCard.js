@@ -1,3 +1,4 @@
+import React from 'react'
 import styles from "./JobCard.module.css";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
